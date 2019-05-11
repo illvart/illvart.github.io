@@ -35,6 +35,7 @@ Deploying to GitHub Pages:
 ```
 $ yarn deploy
 ```
+Note: Create a new branch with the name gh-pages, then deploy static directory to the gh-pages branch.
 
 ### PWA
 After editing the code and adding something, then inject manifest:
