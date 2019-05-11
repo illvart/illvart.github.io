@@ -2,6 +2,7 @@
 
 > No JavaScript, Just CSS!
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0392af17-3c20-4278-8139-7dbabd347d5c/deploy-status)](https://app.netlify.com/sites/illvart/deploys)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![UI: Material Design](https://img.shields.io/badge/UI-Material%20Design-%23FF4081.svg)](https://material.io)
 [![Icons: Material Design Icons](https://img.shields.io/badge/Icons-Material%20Design%20Icons-%232196F3.svg)](https://github.com/templarian/MaterialDesign/)
