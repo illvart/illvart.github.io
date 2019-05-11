@@ -1,0 +1,37 @@
+{
+  "name": "illvart.github.io",
+  "description": "My Personal Website.",
+  "version": "0.0.1",
+  "author": {
+    "email": "illvart.email@gmail.com",
+    "name": "MNF (illvart)",
+    "url": "https://illvart.now.sh"
+  },
+  "main": "n/a",
+  "license": "MIT",
+  "homepage": "https://github.com/illvart/illvart.github.io",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/illvart/illvart.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/illvart/illvart.github.io/issues"
+  },
+  "keywords": [
+    "personal website",
+    "blog",
+    "material design",
+    "PWA"
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.0.1",
+    "http-server": "^0.11.1",
+    "workbox-cli": "^4.3.1"
+  },
+  "scripts": {
+    "dev": "http-server ./static/",
+    "deploy": "gh-pages -d ./static/",
+    "inject-manifest": "workbox injectManifest"
+  }
+}

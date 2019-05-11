@@ -1,0 +1,419 @@
+/*! Styling CSS by MNF - https://github.com/illvart */
+
+/* Reset */
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-repeat: no-repeat;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+  word-break: break-word;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  width: 100%;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+}
+body {
+  min-height: 100%;
+  margin: 0;
+  background-color: #f2f2f2;
+  color: #212121;
+  font-family: "Roboto Mono", monospace;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+hr {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+a {
+  color: #2962ff;
+}
+a:hover {
+  opacity: 0.8;
+}
+
+/* Card */
+.card {
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* Container */
+.container {
+  padding: 16px;
+}
+.container.center {
+  text-align: center;
+}
+
+/* Content */
+.content {
+  min-height: 400px;
+  margin: 0 auto;
+}
+
+/* Cover */
+.cover {
+  background-color: #212121;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  padding: 32px 16px;
+  text-align: center;
+  z-index: 1;
+}
+.avatar {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+}
+.avatar img {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  background-color: #dddddd;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  -webkit-box-shadow: 0 9px 30px 3px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 9px 30px 3px rgba(0, 0, 0, 0.16);
+}
+.name {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 12px 0 8px;
+}
+.position {
+  color: #f2f2f2;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0; /* 8px 0 0 */
+}
+
+/* Resume content */
+.resume {
+  padding: 16px;
+}
+.resume h3 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.resume h3[id]:target:before {
+  content: "";
+  display: block;
+  height: 64px;
+  margin-top: -64px;
+  visibility: hidden;
+}
+
+/* List */
+.list {
+  margin: 14px 0;
+}
+.container.center .list.horizontal {
+  max-width: 320px;
+  margin: 14px auto;
+}
+.list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.list ul > li {
+  padding: 6px 0;
+}
+.list.horizontal ul > li {
+  display: inline;
+}
+.list ul > li:last-child {
+  padding-bottom: 0;
+}
+.list ul > li > a {
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 2px solid currentColor;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 16px 0;
+  margin: 16px auto 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Follow me */
+.follow-me a {
+  display: inline-block;
+  width: 34px;
+  min-width: 34px;
+  height: 34px;
+  line-height: 34px;
+  padding: 0;
+  margin: 6px 8px;
+  border-radius: 50%;
+  background-color: #212121;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  -webkit-transition: -webkit-box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+    -webkit-box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+    -webkit-box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: box-shadow;
+}
+.follow-me a:focus,
+.follow-me a:hover {
+  color: #fff !important;
+  background-color: #2962ff;
+  -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.follow-me a > i {
+  color: #fff;
+  font-size: 15px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .name {
+    font-size: 16px;
+  }
+  .position {
+    font-size: 14px;
+  }
+}
+
+/* Button */
+.btn {
+  font-family: inherit;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  word-spacing: normal;
+  border: 0;
+  outline: none;
+  background-image: none;
+  background-color: #212121;
+  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  min-width: 88px;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 16px;
+  margin: 6px 0 0;
+  border-radius: 4px;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1), 0.2s color;
+  -o-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1), 0.2s color;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1), 0.2s color;
+  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  -webkit-transition: -webkit-box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    -webkit-box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    -webkit-box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: box-shadow;
+}
+.btn:hover,
+.btn:focus {
+  background-color: #424242;
+  text-decoration: none;
+  -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.btn:active {
+  background: #545454;
+  -webkit-box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+.btn .mdi {
+  margin-left: 6px;
+}
+
+/* Donation modal */
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  visibility: hidden;
+  will-change: opacity;
+}
+.modal * {
+  text-align: left;
+}
+.modal-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+}
+.modal-state {
+  display: none;
+}
+.modal-state:checked + .modal {
+  opacity: 1;
+  visibility: visible;
+}
+.modal-state:checked + .modal .modal-inner {
+  top: 0;
+}
+.modal-inner {
+  position: absolute;
+  top: -20%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  margin: auto;
+  overflow: auto;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 16px 24px;
+  height: 50%;
+  -webkit-transition: top 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: top 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: top 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2),
+    0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2),
+    0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
+}
+.modal-inner .modal-title {
+  font-size: 24px;
+  line-height: normal;
+  margin: 0;
+  padding: 0 0 8px;
+}
+.modal-inner p {
+  font-size: 16px;
+  overflow: hidden;
+}
+.modal-close {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.modal-close:after,
+.modal-close:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  margin: 0;
+  top: 0;
+  display: block;
+  width: 2px;
+  height: 22px;
+  background-color: #616161;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.modal-close:hover:after,
+.modal-close:hover:before {
+  background-color: #212121;
+}
+.modal-close:before {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+@media (max-width: 768px) {
+  .modal-inner {
+    width: 90%;
+    height: 90%;
+  }
+}
