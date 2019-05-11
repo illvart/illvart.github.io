@@ -8,7 +8,7 @@ if (workbox) {
 workbox.precaching.precacheAndRoute([
   {
     "url": "404.html",
-    "revision": "41ce85e85428f8cfc2996703ea70c355"
+    "revision": "4b00dbdf42ccce80717a8f3f90d4be45"
   },
   {
     "url": "assets/css/style.css",
@@ -76,11 +76,11 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "index.html",
-    "revision": "d26029c75b16aeaccaa35b8fcef35714"
+    "revision": "ce90021d92779a00528cf96df5dfd730"
   },
   {
     "url": "index.js",
-    "revision": "3795618a5e38d599683b28e98c56f253"
+    "revision": "e6ed6e8d01d8d33160a0decab48c2d57"
   },
   {
     "url": "manifest.json",
