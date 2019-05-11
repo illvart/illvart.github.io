@@ -76,11 +76,11 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "index.html",
-    "revision": "ce90021d92779a00528cf96df5dfd730"
+    "revision": "dd69a0da80787a6c638c0bd88fbfa748"
   },
   {
     "url": "index.js",
-    "revision": "e6ed6e8d01d8d33160a0decab48c2d57"
+    "revision": "4cb8ff47a2ed75a95233b85e904f92f3"
   },
   {
     "url": "manifest.json",
@@ -105,7 +105,7 @@ workbox.routing.registerRoute(
 workbox.routing.registerRoute(
   /^https:\/\/cdn\.jsdelivr\.net\//,
   new workbox.strategies.StaleWhileRevalidate({
-    cacheName: "google-fonts-stylesheets"
+    cacheName: "jsdelivr"
   })
 );
 // Handle any images
