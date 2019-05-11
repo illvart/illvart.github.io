@@ -24,7 +24,7 @@ workbox.routing.registerRoute(
 workbox.routing.registerRoute(
   /^https:\/\/cdn\.jsdelivr\.net\//,
   new workbox.strategies.StaleWhileRevalidate({
-    cacheName: "google-fonts-stylesheets"
+    cacheName: "jsdelivr"
   })
 );
 // Handle any images
