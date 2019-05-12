@@ -1,7 +1,2 @@
 [build]
   publish = "static"
-
-[[headers]]
-  for = "/assets/img/*"
-  [headers.values]
-    Cache-Control = "max-age=604800, public, stale-while-revalidate=5"
