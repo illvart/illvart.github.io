@@ -1,13 +1,13 @@
 {
   "name": "illvart.github.io",
   "description": "My Personal Website.",
-  "version": "0.0.1",
+  "version": "1.0",
   "author": {
     "email": "illvart.email@gmail.com",
     "name": "MNF (illvart)",
     "url": "https://illvart.pinkyui.com"
   },
-  "main": "n/a",
+  "main": "index.html",
   "license": "MIT",
   "homepage": "https://github.com/illvart/illvart.github.io",
   "private": true,
@@ -22,7 +22,8 @@
     "personal website",
     "blog",
     "material design",
-    "PWA"
+    "PWA",
+    "Workbox"
   ],
   "devDependencies": {
     "gh-pages": "^2.0.1",
