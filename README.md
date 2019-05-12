@@ -32,7 +32,7 @@ $ yarn dev
 ```
 
 ### Deploy
-Deploying to GitHub Pages:
+Default deploy command for **GitHub Pages**. You can also use **Netlify**, and this automatically pointing to static directory.
 ```
 $ yarn deploy
 ```
