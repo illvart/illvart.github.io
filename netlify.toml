@@ -2,6 +2,15 @@
   publish = "static"
 
 [[headers]]
+  for = "/*"
+  [headers.values]
+    Feature-Policy = "camera 'none'; geolocation 'none'; microphone 'none'"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
+
+[[headers]]
   for = "/assets/img/*"
   [headers.values]
     Cache-Control = "max-age=604800, public, stale-while-revalidate=5"
