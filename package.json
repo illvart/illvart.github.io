@@ -32,6 +32,6 @@
   "scripts": {
     "dev": "http-server ./static/",
     "deploy": "gh-pages -d ./static/",
-    "inject-manifest": "workbox injectManifest"
+    "inject-manifest": "workbox injectManifest && minify --mangle.topLevel ./static/sw.js --outFile ./static/sw.js"
   }
 }

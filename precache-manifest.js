@@ -51,6 +51,6 @@ workbox.routing.registerRoute(
 self.addEventListener("install", function(e) {
   e.waitUntil(self.skipWaiting());
 });
-self.addEventListener("activate", function(e) {
+self.addEventListener("activate", function() {
   self.clients.claim();
 });
