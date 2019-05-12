@@ -1,6 +1,6 @@
 ## [illvart.github.io](https://github.com/illvart/illvart.github.io)
 
-> No JavaScript, Just CSS!
+> No JavaScript, just CSS!
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0392af17-3c20-4278-8139-7dbabd347d5c/deploy-status)](https://app.netlify.com/sites/illvart/deploys)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -9,7 +9,7 @@
 [![PWA: yes](https://img.shields.io/badge/PWA-yes-%235A0FC8.svg)](https://developers.google.com/web/progressive-web-apps/)
 [![Plugin: Workbox](https://img.shields.io/badge/Plugin-Workbox-%23F57C00.svg)](https://github.com/GoogleChrome/workbox)
 
-This is my first open source project. Basically this doesn't use ~~JavaScript~~, only CSS! But support **Progressive Web Apps (PWA)** with [Workbox](https://github.com/GoogleChrome/workbox).
+This is my first open source project. Basically, this doesn't use ~~JavaScript~~, only CSS! But support **Progressive Web Apps (PWA)** with [Workbox](https://github.com/GoogleChrome/workbox).
 
 ---
 
@@ -32,7 +32,7 @@ $ yarn dev
 ```
 
 ### Deploy
-Default deploy command for **GitHub Pages**. You can also use **Netlify**, and this automatically pointing to static directory.
+Default deploy command for **GitHub Pages**. You can also use **Netlify**, and this automatically pointing to the static directory.
 ```
 $ yarn deploy
 ```
