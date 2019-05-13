@@ -12,7 +12,6 @@
 
 This is my first open source project. Basically, this doesn't use ~~JavaScript~~, only CSS! But support **Progressive Web Apps (PWA)** with [Workbox](https://github.com/GoogleChrome/workbox).
 
----
 
 ![Screenshot](https://cdn.staticaly.com/screenshot/illvart.pinkyui.com?fullPage=true)
 
