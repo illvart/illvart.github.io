@@ -20,49 +20,32 @@ publish = "static"
   for = "*.html"
   [headers.values]
     Content-Type = "text/html; charset=utf-8"
+    X-Content-Security-Policy = "default-src 'none'"
+    X-UA-Compatible = "IE=Edge"
     Cache-Control = "no-cache"
 
 [[headers]]
   for = "*.css"
   [headers.values]
     Content-Type = "text/css; charset=utf-8"
-    Cache-Control = "max-age=31536000, immutable"
+    Cache-Control = "max-age=604800, public"
 
 [[headers]]
   for = "*.js"
   [headers.values]
     Content-Type = "text/javascript; charset=utf-8"
-    Cache-Control = "max-age=31536000, immutable"
+    Cache-Control = "max-age=604800, public"
 
 [[headers]]
   for = "/site.webmanifest"
   [headers.values]
     Content-Type = "application/manifest+json; charset=utf-8"
-    Cache-Control = "max-age=31536000, immutable"
+    Cache-Control = "max-age=604800, public"
 
 [[headers]]
-  for = "*.gif"
+  for = "/assets/img/*"
   [headers.values]
-    Content-Type = "image/gif"
-    Cache-Control = "max-age=31536000, immutable"
-
-[[headers]]
-  for = "*.jpg"
-  [headers.values]
-    Content-Type = "image/jpeg"
-    Cache-Control = "max-age=31536000, immutable"
-
-[[headers]]
-  for = "*.png"
-  [headers.values]
-    Content-Type = "image/png"
-    Cache-Control = "max-age=31536000, immutable"
-
-[[headers]]
-  for = "*.svg"
-  [headers.values]
-    Content-Type = "image/svg+xml; charset=utf-8"
-    Cache-Control = "max-age=31536000, immutable"
+    Cache-Control = "max-age=604800, public"
 
 [[redirects]]
   from = "https://illvart.netlify.com/*"
