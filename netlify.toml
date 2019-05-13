@@ -15,7 +15,7 @@ publish = "static"
       style-src 'self' *.cloudfront.net 'unsafe-inline';
       img-src 'self' https://img.shields.io *.cloudfront.net;
       font-src 'self' *.cloudfront.net;
-      script-src https://cdn.jsdelivr.net 'self' 'unsafe-inline' *.cloudfront.net;
+      script-src 'none';
       connect-src 'self';
       base-uri 'none';
       upgrade-insecure-requests;
