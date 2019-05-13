@@ -17,8 +17,6 @@ publish = "static"
       font-src 'self' *.cloudfront.net;
       script-src 'self';
       connect-src 'self';
-      base-uri 'none';
-      upgrade-insecure-requests;
       report-uri https://illvart.report-uri.com/r/d/csp/reportOnly;
     """
     Expect-CT = """
