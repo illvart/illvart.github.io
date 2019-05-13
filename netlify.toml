@@ -9,13 +9,29 @@ publish = "static"
     X-Content-Type-Options = "nosniff"
     Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
     Referrer-Policy = "same-origin"
-    Cache-Control = "max-age=31536000, immutable"
     Content-Security-Policy = "report-uri https://illvart.report-uri.com/r/d/ct/reportOnly"
     Expect-CT = """
       max-age=0, report-uri="https://illvart.report-uri.com/r/d/ct/reportOnly"
     """
     Feature-Policy = "camera 'none'; geolocation 'none'; microphone 'none'"
     Accept-Encoding = "gzip, deflate, br"
+
+[[headers]]
+  for = "*.html"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Content-Type = "text/javascript; charset=utf-8"
+    Cache-Control = "max-age=31536000, immutable"
+
+[[headers]]
+  for = "/site.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json; charset=utf-8"
 
 [[headers]]
   for = "*.gif"
@@ -36,16 +52,6 @@ publish = "static"
   for = "*.svg"
   [headers.values]
     Content-Type = "image/svg+xml; charset=utf-8"
-
-[[headers]]
-  for = "*.js"
-  [headers.values]
-    Content-Type = "text/javascript; charset=utf-8"
-
-[[headers]]
-  for = "/site.webmanifest"
-  [headers.values]
-    Content-Type = "application/manifest+json; charset=utf-8"
 
 [[redirects]]
   from = "https://illvart.netlify.com/*"
