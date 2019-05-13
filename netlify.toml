@@ -10,8 +10,20 @@ publish = "static"
     Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
     Referrer-Policy = "same-origin"
     Cache-Control = "max-age=31536000, immutable"
-    Content-Security-Policy = "default-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; script-src 'self'; connect-src 'self'; report-uri https://illvart.report-uri.com/r/d/csp/reportOnly"
-    Expect-CT = "max-age=0, report-uri="https://illvart.report-uri.com/r/d/csp/reportOnly"
+    Content-Security-Policy = """
+      default-src 'none';
+      style-src 'self' *.cloudfront.net 'unsafe-inline';
+      img-src 'self' https://img.shields.io *.cloudfront.net;
+      font-src 'self' *.cloudfront.net;
+      script-src 'self';
+      connect-src 'self';
+      base-uri 'none';
+      upgrade-insecure-requests;
+      report-uri https://illvart.report-uri.com/r/d/csp/reportOnly;
+    """
+    Expect-CT = """
+      max-age=0, report-uri="https://illvart.report-uri.com/r/d/csp/reportOnly"
+    """
     Feature-Policy = "camera 'none'; geolocation 'none'; microphone 'none'"
     Accept-Encoding = "gzip, deflate, br"
 
