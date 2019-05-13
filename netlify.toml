@@ -12,9 +12,9 @@ publish = "static"
     Cache-Control = "max-age=31536000, immutable"
     Content-Security-Policy = """
       default-src 'none';
-      style-src 'self' *.cloudfront.net 'unsafe-inline';
-      img-src 'self' https://img.shields.io *.cloudfront.net;
-      font-src 'self' *.cloudfront.net;
+      style-src 'self';
+      font-src 'self';
+      img-src 'self';
       script-src 'self';
       connect-src 'self';
       report-uri https://illvart.report-uri.com/r/d/csp/reportOnly;
