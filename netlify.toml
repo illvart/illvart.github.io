@@ -23,6 +23,12 @@ publish = "static"
     Cache-Control = "no-cache"
 
 [[headers]]
+  for = "*.css"
+  [headers.values]
+    Content-Type = "text/css; charset=utf-8"
+    Cache-Control = "max-age=31536000, immutable"
+
+[[headers]]
   for = "*.js"
   [headers.values]
     Content-Type = "text/javascript; charset=utf-8"
