@@ -32,26 +32,31 @@ publish = "static"
   for = "/site.webmanifest"
   [headers.values]
     Content-Type = "application/manifest+json; charset=utf-8"
+    Cache-Control = "max-age=31536000, immutable"
 
 [[headers]]
   for = "*.gif"
   [headers.values]
     Content-Type = "image/gif"
+    Cache-Control = "max-age=31536000, immutable"
 
 [[headers]]
   for = "*.jpg"
   [headers.values]
     Content-Type = "image/jpeg"
+    Cache-Control = "max-age=31536000, immutable"
 
 [[headers]]
   for = "*.png"
   [headers.values]
     Content-Type = "image/png"
+    Cache-Control = "max-age=31536000, immutable"
 
 [[headers]]
   for = "*.svg"
   [headers.values]
     Content-Type = "image/svg+xml; charset=utf-8"
+    Cache-Control = "max-age=31536000, immutable"
 
 [[redirects]]
   from = "https://illvart.netlify.com/*"
