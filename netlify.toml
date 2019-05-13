@@ -59,4 +59,4 @@ publish = "static"
 
 [[redirects]]
   from = "https://illvart.netlify.com/*"
-  to = "https://illvart.pinkyui.com/"
+  to = "https://illvart.pinkyui.com/:splat"
