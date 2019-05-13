@@ -9,7 +9,7 @@ publish = "static"
     X-Content-Type-Options = "nosniff"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     X-UA-Compatible = "IE=Edge"
-    Cache-Control = "no-cache"
+    Cache-Control = "max-age=31536000, immutable"
 
 [[headers]]
   for = "*.gif"
@@ -35,6 +35,7 @@ publish = "static"
   for = "*.js"
   [headers.values]
     Content-Type = "application/javascript; charset=utf-8"
+    Accept-Encoding = "gzip, deflate, br"
 
 [[headers]]
   for = "/site.webmanifest"
