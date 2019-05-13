@@ -10,7 +10,7 @@ publish = "static"
     Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
     Referrer-Policy = "same-origin"
     Cache-Control = "max-age=31536000, immutable"
-    Content-Security-Policy = "default-src https: 'unsafe-inline' 'unsafe-eval'; report-uri https://illvart.report-uri.com/r/d/csp/reportOnly"
+    Content-Security-Policy = "default-src https: 'unsafe-inline'; report-uri https://illvart.report-uri.com/r/d/csp/reportOnly"
     Feature-Policy = "camera 'none'; geolocation 'none'; microphone 'none'"
     Accept-Encoding = "gzip, deflate, br"
 
