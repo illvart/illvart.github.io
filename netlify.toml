@@ -7,13 +7,6 @@ publish = "static"
     X-Content-Type-Options = "nosniff"
     Strict-Transport-Security = "max-age=31536000"
     Referrer-Policy = "no-referrer-when-downgrade"
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    Feature-Policy = "camera 'none'; geolocation 'none'; microphone 'none'"
-    Content-Security-Policy = "report-uri https://illvart.report-uri.com/r/d/ct/reportOnly"
-    Expect-CT = """
-      max-age=0, report-uri="https://illvart.report-uri.com/r/d/ct/reportOnly"
-    """
 
 [[headers]]
   for = "*.html"
@@ -21,6 +14,17 @@ publish = "static"
     Content-Type = "text/html; charset=utf-8"
     Cache-Control = "no-cache"
     X-UA-Compatible = "IE=Edge"
+
+[[headers]]
+  for = "/"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Feature-Policy = "camera 'none'; geolocation 'none'; microphone 'none'"
+    Content-Security-Policy = "report-uri https://illvart.report-uri.com/r/d/ct/reportOnly"
+    Expect-CT = """
+      max-age=0, report-uri="https://illvart.report-uri.com/r/d/ct/reportOnly"
+    """
 
 [[headers]]
   for = "*.css"
