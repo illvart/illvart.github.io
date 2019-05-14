@@ -7,10 +7,10 @@ publish = "static"
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
-    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    Strict-Transport-Security = "max-age=31536000"
     Feature-Policy = "camera 'none'; geolocation 'none'; microphone 'none'"
     Accept-Encoding = "gzip, deflate, br"
-    Referrer-Policy = "same-origin"
+    Referrer-Policy = "no-referrer-when-downgrade"
     Content-Security-Policy = "report-uri https://illvart.report-uri.com/r/d/ct/reportOnly"
     Expect-CT = """
       max-age=0, report-uri="https://illvart.report-uri.com/r/d/ct/reportOnly"
@@ -27,25 +27,21 @@ publish = "static"
   for = "*.css"
   [headers.values]
     Content-Type = "text/css; charset=utf-8"
-    Cache-Control = "max-age=31536000, immutable"
+    Cache-Control = "immutable, max-age=31536000"
 
 [[headers]]
   for = "*.js"
   [headers.values]
     Content-Type = "text/javascript; charset=utf-8"
-    Cache-Control = "max-age=31536000, immutable"
+    Cache-Control = "immutable, max-age=31536000"
 
 [[headers]]
   for = "/site.webmanifest"
   [headers.values]
     Content-Type = "application/manifest+json; charset=utf-8"
-    Cache-Control = "no-cache"
+    Cache-Control = "immutable, max-age=31536000"
 
 [[headers]]
   for = "/assets/img/*"
   [headers.values]
-    Cache-Control = "max-age=31536000, immutable"
-
-[[redirects]]
-  from = "https://illvart.netlify.com/*"
-  to = "https://illvart.pinkyui.com/"
+    Cache-Control = "immutable, max-age=31536000"
