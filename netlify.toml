@@ -52,7 +52,7 @@ publish = "static"
     Cache-Control = "immutable, max-age=31536000"
 
 [[headers]]
-  for = "https://cdn.amplitude.com/*.js"
+  for = "https://cdn.amplitude.com/libs/amplitude-5.2.2-min.gz.js"
   [headers.values]
     Content-Type = "text/javascript; charset=utf-8"
     Cache-Control = "immutable, max-age=31536000"
