@@ -4,8 +4,10 @@ publish = "static"
 [[headers]]
   for = "/*"
   [headers.values]
-    Accept-Encoding = "gzip, deflate, br"
+    X-Content-Type-Options = "nosniff"
+    Strict-Transport-Security = "max-age=31536000"
     Referrer-Policy = "no-referrer-when-downgrade"
+    Accept-Encoding = "gzip, deflate, br"
 
 [[headers]]
   for = "*.html"
@@ -15,8 +17,6 @@ publish = "static"
     X-UA-Compatible = "IE=Edge"
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
-    Strict-Transport-Security = "max-age=31536000"
     Feature-Policy = "camera 'none'; geolocation 'none'; microphone 'none'"
     Content-Security-Policy = "report-uri https://illvart.report-uri.com/r/d/ct/reportOnly"
     Expect-CT = """
