@@ -37,6 +37,13 @@ Running on localhost by using [http-server](https://github.com/indexzero/http-se
 $ yarn dev
 ```
 
+### PWA
+After editing the code and adding something, then inject manifest:
+
+```
+$ yarn inject-manifest
+```
+
 ### Deploy
 Default deploy command for **GitHub Pages**. You can also use **Netlify**, and this automatically pointing to the static directory.
 
@@ -45,13 +52,6 @@ $ yarn deploy
 ```
 
 Note: Create a new branch with the name gh-pages, then deploy static directory to the gh-pages branch.
-
-### PWA
-After editing the code and adding something, then inject manifest:
-
-```
-$ yarn inject-manifest
-```
 
 ### Testing
 You can test netlify headers including security, cache, etc:
