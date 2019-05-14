@@ -7,7 +7,6 @@ publish = "static"
     X-Content-Type-Options = "nosniff"
     Strict-Transport-Security = "max-age=31536000"
     Referrer-Policy = "no-referrer-when-downgrade"
-    Accept-Encoding = "gzip, deflate, br"
 
 [[headers]]
   for = "*.html"
@@ -28,12 +27,14 @@ publish = "static"
   [headers.values]
     Content-Type = "text/css; charset=utf-8"
     Cache-Control = "immutable, max-age=31536000"
+    Accept-Encoding = "gzip, deflate, br"
 
 [[headers]]
   for = "*.js"
   [headers.values]
     Content-Type = "text/javascript; charset=utf-8"
     Cache-Control = "immutable, max-age=31536000"
+    Accept-Encoding = "gzip, deflate, br"
 
 [[headers]]
   for = "/site.webmanifest"
