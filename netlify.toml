@@ -50,3 +50,12 @@ publish = "static"
   for = "/assets/img/*"
   [headers.values]
     Cache-Control = "immutable, max-age=31536000"
+
+[[headers]]
+  for = "https://cdn.amplitude.com/*.js"
+  [headers.values]
+    Content-Type = "text/javascript; charset=utf-8"
+    Cache-Control = "immutable, max-age=31536000"
+    Accept-Encoding = "gzip, deflate, br"
+    Strict-Transport-Security = "max-age=31536000"
+    X-Content-Type-Options = "nosniff"
