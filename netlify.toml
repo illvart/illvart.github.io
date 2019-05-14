@@ -8,13 +8,13 @@ publish = "static"
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    Feature-Policy = "camera 'none'; geolocation 'none'; microphone 'none'"
+    Accept-Encoding = "gzip, deflate, br"
     Referrer-Policy = "same-origin"
     Content-Security-Policy = "report-uri https://illvart.report-uri.com/r/d/ct/reportOnly"
     Expect-CT = """
       max-age=0, report-uri="https://illvart.report-uri.com/r/d/ct/reportOnly"
     """
-    Feature-Policy = "camera 'none'; geolocation 'none'; microphone 'none'"
-    Accept-Encoding = "gzip, deflate, br"
 
 [[headers]]
   for = "*.html"
@@ -27,13 +27,13 @@ publish = "static"
   for = "*.css"
   [headers.values]
     Content-Type = "text/css; charset=utf-8"
-    Cache-Control = "max-age=604800, public"
+    Cache-Control = "max-age=31536000, immutable"
 
 [[headers]]
   for = "*.js"
   [headers.values]
     Content-Type = "text/javascript; charset=utf-8"
-    Cache-Control = "max-age=604800, public"
+    Cache-Control = "max-age=31536000, immutable"
 
 [[headers]]
   for = "/site.webmanifest"
@@ -44,7 +44,7 @@ publish = "static"
 [[headers]]
   for = "/assets/img/*"
   [headers.values]
-    Cache-Control = "max-age=604800, public"
+    Cache-Control = "max-age=31536000, immutable"
 
 [[redirects]]
   from = "https://illvart.netlify.com/*"
