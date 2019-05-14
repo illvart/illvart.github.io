@@ -9,7 +9,7 @@ publish = "static"
     Referrer-Policy = "no-referrer-when-downgrade"
 
 [[headers]]
-  for = "*.html"
+  for = "/*.html"
   [headers.values]
     Content-Type = "text/html; charset=utf-8"
     Cache-Control = "no-cache"
