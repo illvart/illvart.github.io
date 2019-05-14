@@ -75,3 +75,8 @@ publish = "static"
   for = "*.ico"
   [headers.values]
     Cache-Control = "immutable, max-age=31536000"
+
+[[headers]]
+  for = "*.webp"
+  [headers.values]
+    Cache-Control = "immutable, max-age=31536000"
