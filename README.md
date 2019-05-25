@@ -60,7 +60,7 @@ You can test netlify headers including security, cache, etc:
 - [webhint](https://webhint.io/scanner/7a2fa722-6fa4-43bf-b692-9400366979c6)
 
 ### Note
-Version v1.0 has been released, [download here](https://github.com/illvart/illvart.github.io/releases). For the next version I will include **Gulp** for optimization of development and production. Soon!
+Version v1.0.0 has been released, [download here](https://github.com/illvart/illvart.github.io/releases). For the next version I will include **Gulp** for optimization of development and production. Soon!
 
 ### License
 This code is available under the [MIT License](LICENSE)
