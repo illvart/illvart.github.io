@@ -140,7 +140,7 @@ gulp.task('minify:html', () =>
         useShortDoctype: true,
         decodeEntities: false, // Avoid decode email address
         collapseBooleanAttributes: true,
-        collapseWhitespace: true,
+        collapseWhitespace: false,
         preventAttributesEscaping: true,
         removeAttributeQuotes: false,
         removeComments: true,
