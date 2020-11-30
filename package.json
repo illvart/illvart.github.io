@@ -1,0 +1,58 @@
+{
+  "name": "illvart.github.io",
+  "version": "0.0.1",
+  "description": "My Personal Website",
+  "main": "n/a",
+  "private": true,
+  "author": {
+    "name": "illvart",
+    "email": "illvart@protonmail.com",
+    "url": "https://twitter.com/illvart"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/illvart/illvart.github.io#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/illvart/illvart.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/illvart/illvart.github.io/issues"
+  },
+  "scripts": {
+    "clean": "gulp clean",
+    "dev": "cross-env NODE_ENV=development gulp dev",
+    "build": "cross-env NODE_ENV=production gulp",
+    "format": "prettier --check \"./**/*.{js,jsx,json,ts,tsx,css,html,yml,yaml,scss,sass}\" --write"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true,
+    "bracketSpacing": false,
+    "arrowParens": "always",
+    "trailingComma": "all",
+    "semi": true,
+    "proseWrap": "always",
+    "jsxBracketSameLine": true
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.13",
+    "cross-env": "^7.0.2",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-data": "^1.3.1",
+    "gulp-debug": "^4.0.0",
+    "gulp-front-matter": "^1.3.0",
+    "gulp-html-minifier-terser": "^6.0.1",
+    "gulp-inject-string": "^1.1.2",
+    "gulp-nunjucks": "^5.1.0",
+    "gulp-pretty-data": "^0.1.2",
+    "gulp-sitemap": "^7.6.0",
+    "js-yaml": "^3.14.0",
+    "marked": "^1.2.5",
+    "nunjucks": "^3.2.2",
+    "nunjucks-markdown": "^2.0.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
+}

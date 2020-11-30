@@ -1,0 +1,65 @@
+{%- set content -%}
+{% block content %}{# Content #}{% endblock %}
+{%- endset -%}
+{% if mode != "production" %}
+{% set siteUrl = host %}
+{% else %}
+{% set siteUrl = config.url %}
+{% endif %}
+{% if fileName == "index" %}
+{% set page = {
+    url: siteUrl,
+    title: config.shortTitle,
+    description: config.description,
+    images: siteUrl + config.ogImage,
+    alt: config.imageAlt
+  }
+%}
+{% else %}
+{% set page = {
+    url: siteUrl + "/" + fileName,
+    title: data.title + " – " + config.shortTitle,
+    description: data.description,
+    images: siteUrl + data.images,
+    alt: data.alt
+  }
+%}
+{% endif %}
+<!DOCTYPE html>
+<html dir="{{ config.site.dir }}" lang="{{ config.site.lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if fileName == "index" %}{{ config.title }}{% else %}{{ data.title }} – {{ config.shortTitle }}{% endif %}</title>
+<meta name="description" content="{{ page.description }}">
+<link rel="canonical" href="{{ page.url }}">
+<meta name="robots" content="{% if fileName != "404" %}index,follow{% else %}noindex{% endif %}">
+{# meta open graph #}
+{%- include "includes/meta-og.njk" -%}
+{# meta twitter #}
+{%- include "includes/meta-twitter.njk" -%}
+{# meta misc #}
+{%- include "includes/meta-misc.njk" -%}
+{# meta favicon #}
+{%- include "includes/meta-favicon.njk" -%}
+{# stylesheet #}
+{%- include "includes/styles.njk" -%}
+</head>
+<body {% if fileName %}class="{{ fileName }}"{% endif %}>
+{% if fileName != "404" %}
+<noscript>You always need JavaScript to run the web.</noscript>
+{% endif %}
+{% markdown %}
+<div class="container{% if data.center == true %} center{% endif %}">
+<div class="child">
+<h1 class="title">{% if fileName == "index" %}<a href="/" title="{{ data.title }}">{{ data.title }}</a>{% else %}{{ data.title }}{% endif %}</h1>
+<h2 class="subtitle">{{ data.description }}</h2>
+{{ content | safe | trim }}
+</div>
+</div>
+{% endmarkdown %}
+{% if fileName != "404" -%}
+{% include "includes/scripts.njk" %}
+{%- endif %}
+</body>
+</html>

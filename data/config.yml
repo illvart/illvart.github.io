@@ -1,0 +1,28 @@
+title: illvart – Developer, writer, creator.
+shortTitle: illvart
+url: https://illvart.github.io
+description: Full-stack developer, open source lover, modern web enthusiast, and researcher
+ogImage: '/images/og.png'
+imageAlt: 'illvart cover images'
+redirectTo: https://illvart.xyz
+
+site:
+  dir: ltr
+  lang: en-US
+
+dev:
+  host: '0.0.0.0'
+  port: 3000
+  open: false
+  notify: false
+  online: true
+
+twitter:
+  site: 'illvart'
+  creator: 'illvart'
+
+# Global styles
+style:
+  color: '#f81ce5'
+  text: '#ffffff'
+  background: '#000000'

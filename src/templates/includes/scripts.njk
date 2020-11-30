@@ -1,0 +1,39 @@
+{% if mode == "production" %}
+<script async src="https://cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
+{% endif %}
+<script>
+(function (w, d) {
+  {% if mode == "production" %}
+  w.addEventListener("load", function () {
+    quicklink.listen();
+  });
+  {% endif %}
+  
+  var count = 11;
+  function redirect() {
+    count--;
+    d.getElementById(
+      "redirect"
+    ).innerHTML = "<code>Redirect in " + count + " seconds...</code>";
+    if (count != 0) setTimeout(redirect, 1000);
+  }
+  setTimeout(redirect, 1000);
+  
+  if (
+    w.location.hostname === "localhost" ||
+    w.location.hostname === "127.0.0.1" ||
+    w.location.hostname === "0.0.0.0"
+  ) {
+    return;
+  }
+
+  w.setTimeout(function () {
+    w.location.replace(
+      w.location.href.replace(
+        "{{ config.url | stripProtocol }}",
+        "{{ config.redirectTo | stripProtocol }}"
+      )
+    );
+  }, 12000);
+})(window, document);
+</script>
