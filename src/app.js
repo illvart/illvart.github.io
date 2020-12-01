@@ -14,7 +14,8 @@
       (allowedHostnames.includes(hostname) ||
         hostname.endsWith('.github.io') ||
         hostname.endsWith('.netlify.app') ||
-        hostname.endsWith('.vercel.app'))
+        hostname.endsWith('.vercel.app') ||
+        hostname.endsWith('.codesandbox.io'))
     );
   }
   async function getHTML(url, signal) {
