@@ -1,4 +1,3 @@
 tasks:
   - init: yarn install --frozen-lockfile
     command: yarn run dev
-  
