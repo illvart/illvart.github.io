@@ -1,0 +1,10 @@
+<script src="/quicklink.umd.js"></script>
+<script>
+window.addEventListener("load", function () {
+  quicklink.listen();
+});
+</script>
+
+{% if mode == "production" %}{% endif %}
+
+<script{% if mode == "production" %}async defer{% endif %} src="/{{ app_js }}"></script>

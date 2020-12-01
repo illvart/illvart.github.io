@@ -1,0 +1,6 @@
+{% extends "base.njk" %}
+
+<h1 class="title">{% if fileName == "index" %}<a href="/" title="{{ data.title }}">{{ data.title }}</a>{% else %}{{ data.title }}{% endif %}</h1>
+<h2 class="subtitle">{{ data.description }}</h2>
+
+{% block content %}{% endblock %}

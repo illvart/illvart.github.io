@@ -1,0 +1,16 @@
+<script type="application/ld+json">
+{% startMinifyJson %}
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ config.shortTitle }}",
+  "url": "{{ config.url }}",
+  "sameAs": [
+    "{{ config.social.twitter }}",
+    "{{ config.social.instagram }}",
+    "{{ config.social.github }}"
+  ]
+}
+{% endMinifyJson %}
+
+</script>
