@@ -2,8 +2,11 @@
   "infiniteLoopProtection": true,
   "hardReloadOnChange": true,
   "template": "node",
-  "view": "terminal",
+  "view": "browser",
   "port": 8080,
   "startScript": "dev",
-  "container": { "port": 3000, "startScript": "dev"}
+  "container": {
+    "port": 3000,
+    "startScript": "dev"
+  }
 }
